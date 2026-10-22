@@ -73,6 +73,9 @@ def svg_to_tscn_snippet(svg_path: pathlib.Path | str, extra_properties: dict = {
 
                 curr_poly.points = np.append(curr_poly.points, sampled_points[1:], axis=0)
 
+    for obj in poly_objects:
+        obj.points = obj.points - np.ones(2) * 50
+
     formatted_properties = "".join([f"{key} = {format_tscn_properties(value)}\n" for key, value in extra_properties.items()])
 
     return "".join([
