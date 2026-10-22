@@ -96,7 +96,11 @@ if __name__ == "__main__":
     )
 
     extra_properties = {
-        "width": 1.0
+        "width": 4.0,
+        "joint_mode": 2,
+        "begin_cap_mode": 2,
+        "end_cap_mode": 2,
+        "sharp_limit": 10.0,
     }
 
     if not output_dir.exists():
